@@ -18,6 +18,9 @@ Para a realização desse desafio, foram utilizados conceitos como:
 - [ ] Propriedades
 - [ ] Componentização
 
+Além disso, a responsividade foi algo implementado para o bom funcionamento em qualquer aparelho.
+Foram usadas medidas relativas para a acessibilidade.
+
 # Deploy 🚀
 Você pode testar a aplicação nesse link:
 [todo list](https://todo-list-ten-brown.vercel.app/)
@@ -26,16 +29,16 @@ Você pode testar a aplicação nesse link:
 Para esse desafio, o seguint layout foi utilizado:
 [Layout no Figma](https://www.figma.com/file/giVTkdmX2gBwbbK6fIXGBg/ToDo-List-(Copy)?node-id=0%3A1&t=aXgdl5Ounlh47jsh-1)
 
-# Visualizações
-## Mobile
+# Visualizações 👀
+## Mobile 📱
 Empty List | With tasks
 ------------- | -------------
 <img width="367" alt="image" src="https://user-images.githubusercontent.com/26902816/221260110-3d75c74c-83a6-4095-bbdd-527a817d6d3f.png"> | <img width="367" alt="image" src="https://user-images.githubusercontent.com/26902816/221260636-1586dd24-fcf7-4e49-bd68-4917f4dd73f8.png">
 
-## Web
+## Web 💻
 Empty List | With tasks
 ------------- | -------------
 <img width="1426" alt="image" src="https://user-images.githubusercontent.com/26902816/221261436-68ef01b3-da29-428c-acb8-bf022a956554.png"> | <img width="1426" alt="image" src="https://user-images.githubusercontent.com/26902816/221261360-9d32b3a0-6581-4971-97b9-6996ea122dd3.png">
 
-## Movie
+## Movie 🎥
 https://user-images.githubusercontent.com/26902816/221264300-43b0071a-fb96-4b04-847c-df345899a351.mov
