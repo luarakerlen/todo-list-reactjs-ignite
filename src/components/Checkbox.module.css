@@ -13,7 +13,7 @@
 	border-radius: 50%;
 	cursor: pointer;
 
-  transition: background-color 0.2s, border-color 0.2s;
+	transition: background-color 0.2s, border-color 0.2s;
 	background-color: transparent;
 	border: 2px solid var(--blue);
 }
@@ -26,16 +26,18 @@
 .round input[type='checkbox']:checked + label {
 	background-color: var(--purple-dark);
 	border-color: var(--purple-dark);
+	opacity: 0.9;
 }
 
 .round input[type='checkbox']:checked + label:hover {
 	background-color: var(--purple);
 	border-color: var(--purple);
+	opacity: 0.9;
 }
 
 .round label:after {
-	height: 0.3125rem;
-	width: 0.5625rem;
+	height: 0.3rem;
+	width: 0.5rem;
 	transform: rotate(-45deg);
 
 	border: 2px solid var(--gray-100);

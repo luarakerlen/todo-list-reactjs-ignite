@@ -7,18 +7,30 @@
 	align-items: flex-start;
 
 	background-color: var(--gray-500);
-	border: 1px solid var(--gray-400);
 	border-radius: 8px;
-	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
 
 	font-size: 0.875rem;
 	color: var(--gray-100);
 	line-height: 140%;
 }
 
+.notDone {
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+	border: 1px solid var(--gray-400);
+}
+
+.done {
+	border: 1px solid var(--gray-500);
+}
+
 .content {
 	display: flex;
 	gap: 1rem;
+}
+
+.doneText {
+	color: var(--gray-300);
+	text-decoration-line: line-through;
 }
 
 button {

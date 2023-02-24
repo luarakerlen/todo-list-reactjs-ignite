@@ -14,6 +14,7 @@ export function MainTasksArea({
 	handleClickCheckbox,
 }: TasksAreaProps) {
 	const hasSomeTask = tasks.length !== 0;
+	const doneTasks = tasks.filter((task) => task.done === true).length;
 
 	return (
 		<div className={styles.container}>
@@ -24,7 +25,9 @@ export function MainTasksArea({
 				</div>
 				<div>
 					<span className={styles.finishedTasks}>Concluídas</span>
-					<span className={styles.numberOfTasks}>0 de {tasks.length}</span>
+					<span className={styles.numberOfTasks}>
+						{doneTasks} de {tasks.length}
+					</span>
 				</div>
 			</header>
 			<div>

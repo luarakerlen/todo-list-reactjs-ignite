@@ -16,10 +16,16 @@ interface TaskProps {
 
 export function Task({ task, deleteTask, handleClickCheckbox }: TaskProps) {
 	return (
-		<div className={styles.container}>
+		<div
+			className={`${styles.container} ${
+				task.done ? styles.done : styles.notDone
+			}`}
+		>
 			<div className={styles.content}>
 				<Checkbox task={task} onClickCheckbox={handleClickCheckbox} />
-				{task.description}
+				<span className={task.done ? styles.doneText : ''}>
+					{task.description}
+				</span>
 			</div>
 			<button
 				className={styles.buttonDelete}
