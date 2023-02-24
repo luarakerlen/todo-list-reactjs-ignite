@@ -1,0 +1,17 @@
+.emptyArea {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 4rem 1.5rem;
+  border-top: 1px solid var(--gray-400);
+}
+
+.emptyArea span {
+  line-height: 140%;
+  color: var(--gray-300);
+}
+
+.firstText {
+  font-weight: bold;
+}

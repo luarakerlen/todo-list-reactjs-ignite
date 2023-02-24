@@ -20,7 +20,8 @@
 
 :focus {
 	outline: transparent;
-	box-shadow:  0 0 0 2px var(--blue);
+	border: 1px solid var(--purple-dark);
+	box-shadow:  0 0 0 1px var(--purple-dark);
 }
 
 * {

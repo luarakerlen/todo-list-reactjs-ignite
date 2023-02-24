@@ -1,0 +1,38 @@
+.container {
+	width: 46rem;
+	margin: 0px auto;
+	margin-top: 2.3rem;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 1.5rem;
+}
+
+header div {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.createdTasks,
+.finishedTasks {
+	font-weight: bold;
+	font-size: 0.875rem;
+}
+
+.createdTasks {
+	color: var(--blue);
+}
+
+.finishedTasks {
+	color: var(--purple);
+}
+
+.numberOfTasks {
+	background-color: var(--gray-400);
+	padding: 0.125rem 0.5rem;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	color: var(--gray-200);
+}
