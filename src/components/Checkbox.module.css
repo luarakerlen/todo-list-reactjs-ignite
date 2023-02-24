@@ -1,0 +1,58 @@
+.round {
+	position: relative;
+}
+
+.round label {
+	height: 1.25rem;
+	width: 1.25rem;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	border-radius: 50%;
+	cursor: pointer;
+
+  transition: background-color 0.2s, border-color 0.2s;
+	background-color: transparent;
+	border: 2px solid var(--blue);
+}
+
+.round label:hover {
+	background-color: var(--gray-400);
+	border-color: var(--blue-dark);
+}
+
+.round input[type='checkbox']:checked + label {
+	background-color: var(--purple-dark);
+	border-color: var(--purple-dark);
+}
+
+.round input[type='checkbox']:checked + label:hover {
+	background-color: var(--purple);
+	border-color: var(--purple);
+}
+
+.round label:after {
+	height: 5px;
+	width: 9px;
+	transform: rotate(-45deg);
+
+	border: 2px solid var(--gray-100);
+	border-top: none;
+	border-right: none;
+	content: '';
+
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	opacity: 0;
+}
+
+.round input[type='checkbox'] {
+	visibility: hidden;
+}
+
+.round input[type='checkbox']:checked + label:after {
+	opacity: 1;
+}

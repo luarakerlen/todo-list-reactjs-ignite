@@ -6,6 +6,7 @@ import styles from './TasksArea.module.css';
 export function TasksArea() {
 	const [tasks, setTasks] = useState<TaskInterface[]>([
 		{ id: 1, done: false, description: 'Tarefa 1' },
+		{ id: 2, done: false, description: 'Tarefa 2' },
 	]);
 
 	const hasSomeTask = tasks.length !== 0;
