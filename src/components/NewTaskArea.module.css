@@ -34,6 +34,7 @@
 .button {
 	padding: 1rem;
 	border-radius: 8px;
+	justify-content: center;
 
 	cursor: pointer;
 	border: none;
@@ -52,4 +53,16 @@
 
 .button:hover {
 	background: var(--blue);
+}
+
+@media (max-width: 768px) {
+	.form {
+		flex-direction: column;
+		width: calc(100% - 4rem);
+	}
+
+	.input,
+	.button {
+		width: 100%;
+	}
 }

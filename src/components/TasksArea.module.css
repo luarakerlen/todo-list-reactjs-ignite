@@ -36,3 +36,9 @@ header div {
 	font-size: 0.75rem;
 	color: var(--gray-200);
 }
+
+@media (max-width: 768px) {
+	.container {
+		width: calc(100% - 4rem);
+	}
+}
