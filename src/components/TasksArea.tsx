@@ -1,14 +1,12 @@
-import { useState } from 'react';
 import { EmptyArea } from './EmptyArea';
 import { Task, TaskInterface } from './Task';
 import styles from './TasksArea.module.css';
 
-export function TasksArea() {
-	const [tasks, setTasks] = useState<TaskInterface[]>([
-		{ id: 1, done: false, description: 'Tarefa 1' },
-		{ id: 2, done: false, description: 'Tarefa 2' },
-	]);
+interface TasksAreaProps {
+	tasks: TaskInterface[];
+}
 
+export function TasksArea({ tasks }: TasksAreaProps) {
 	const hasSomeTask = tasks.length !== 0;
 
 	return (

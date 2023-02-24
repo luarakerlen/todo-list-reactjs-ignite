@@ -3,7 +3,7 @@ import { Checkbox } from './Checkbox';
 import styles from './Task.module.css';
 
 export interface TaskInterface {
-	id: number;
+	id: string;
 	done: boolean;
 	description: string;
 }

@@ -1,6 +1,5 @@
 import { Header } from './components/Header';
 import { NewTaskArea } from './components/NewTaskArea';
-import { TasksArea } from './components/TasksArea';
 import './global.css';
 
 export function App() {
@@ -8,7 +7,6 @@ export function App() {
 		<div>
 			<Header />
 			<NewTaskArea />
-			<TasksArea />
 		</div>
 	);
 }
