@@ -5,9 +5,14 @@ import styles from './MainTasksArea.module.css';
 interface TasksAreaProps {
 	tasks: TaskInterface[];
 	handleDeleteTask: (id: string) => void;
+	handleClickCheckbox: (id: string) => void;
 }
 
-export function MainTasksArea({ tasks, handleDeleteTask }: TasksAreaProps) {
+export function MainTasksArea({
+	tasks,
+	handleDeleteTask,
+	handleClickCheckbox,
+}: TasksAreaProps) {
 	const hasSomeTask = tasks.length !== 0;
 
 	return (
@@ -31,6 +36,7 @@ export function MainTasksArea({ tasks, handleDeleteTask }: TasksAreaProps) {
 									key={task.id}
 									task={task}
 									deleteTask={handleDeleteTask}
+									handleClickCheckbox={handleClickCheckbox}
 								/>
 							);
 						})}

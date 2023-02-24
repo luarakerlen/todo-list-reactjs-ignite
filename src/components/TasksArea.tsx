@@ -36,6 +36,19 @@ export function TasksArea() {
 		setTasks(tasksWithoutDeletedOne);
 	}
 
+	function handleClickCheckbox(idToBeChecked: string) {
+		const tasksEdited = tasks.map((task) => {
+			if (task.id === idToBeChecked) {
+				return {
+					...task,
+					done: !task.done,
+				};
+			} else return task;
+		});
+
+		setTasks(tasksEdited);
+	}
+
 	return (
 		<>
 			<form className={styles.form} onSubmit={handleCreateNewTask}>
@@ -51,7 +64,11 @@ export function TasksArea() {
 					<PlusCircle size={16} weight='bold' />
 				</button>
 			</form>
-			<MainTasksArea tasks={tasks} handleDeleteTask={handleDeleteTask} />
+			<MainTasksArea
+				tasks={tasks}
+				handleDeleteTask={handleDeleteTask}
+				handleClickCheckbox={handleClickCheckbox}
+			/>
 		</>
 	);
 }

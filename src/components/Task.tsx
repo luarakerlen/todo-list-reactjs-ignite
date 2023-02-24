@@ -11,13 +11,10 @@ export interface TaskInterface {
 interface TaskProps {
 	task: TaskInterface;
 	deleteTask: (id: string) => void;
+	handleClickCheckbox: (id: string) => void;
 }
 
-export function Task({ task, deleteTask }: TaskProps) {
-	function handleClickCheckbox() {
-		task.done = !task.done;
-	}
-
+export function Task({ task, deleteTask, handleClickCheckbox }: TaskProps) {
 	return (
 		<div className={styles.container}>
 			<div className={styles.content}>
