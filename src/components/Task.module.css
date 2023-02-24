@@ -16,41 +16,51 @@
 	line-height: 140%;
 }
 
+.content {
+	display: flex;
+	align-items: flex-start;
+	gap: 0.75rem;
+}
+
+input {
+	height: 1.5rem;
+	width: 1.5rem;
+	/* border-radius: 50%;
+	vertical-align: middle; */
+	/* appearance: none; */
+	/* -webkit-appearance: none; */
+	/* outline: none; */
+	cursor: pointer;
+
+	background-color: transparent;
+	border: 2px solid var(--blue);
+	transition: background-color 0.2s, border-color 0.2s;
+}
+
+input:hover {
+	background-color: var(--gray-400);
+	border-color: var(--blue-dark);
+}
+
+input:checked {
+  color: white;
+  background-color: red;
+}
+
 button {
 	background: transparent;
 	border: 0;
 }
 
-.buttonUnchecked {
-  cursor: pointer;
-  color: var(--blue);
-  transition: color 0.2s;
-}
-
-.buttonUnchecked:hover {
-  color: var(--blue-dark);
-}
-
-.buttonChecked {
-  cursor: pointer;
-  color: var(--purple-dark);
-  transition: color 0.2s;
-}
-
-.buttonChecked:hover {
-  color: var(--purple);
-}
-
 .buttonDelete {
-  cursor: pointer;
-  color: var(--gray-300);
-  transition: color 0.2s, background-color 0.2s;
+	cursor: pointer;
+	line-height: 0;
+	border-radius: 4px;
+	color: var(--gray-300);
+	transition: color 0.2s, background-color 0.2s;
 }
 
 .buttonDelete:hover {
-  color: var(--danger);
-  border-radius: 4px;
-  
-  background-color: var(--gray-400);
+	color: var(--danger);
+	background-color: var(--gray-400);
 }
-

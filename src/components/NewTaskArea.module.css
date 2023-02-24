@@ -26,6 +26,11 @@
 	color: var(--gray-300);
 }
 
+.input:focus {
+	outline: transparent;
+	border: 1px solid var(--purple-dark);
+}
+
 .button {
 	padding: 1rem;
 	border-radius: 8px;
