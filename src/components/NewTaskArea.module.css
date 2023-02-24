@@ -1,20 +1,25 @@
 .form {
+	width: 46rem;
+	margin: 0 auto;
+
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-  position: relative;
-  top: -1.7rem;
+
+	position: relative;
+	top: -1.7rem;
 }
 
 .input {
-	width: 39.875rem;
+	flex: 1;
 	padding: 1rem;
 	border-radius: 8px;
+
 	color: var(--gray-100);
 	background: var(--gray-500);
 	border: 1px solid var(--gray-700);
-  line-height: 140%;
+	line-height: 140%;
 }
 
 .input::placeholder {
@@ -22,22 +27,24 @@
 }
 
 .button {
-  background: var(--blue-dark);
-  padding: 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  color: var(--gray-100);
-  font-weight: bold;
-  font-size: 0.875rem;
-  line-height: 140%;
-  transition: background-color 0.2s;
-  
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+	padding: 1rem;
+	border-radius: 8px;
+
+	cursor: pointer;
+	border: none;
+	background: var(--blue-dark);
+	transition: background-color 0.2s;
+
+	color: var(--gray-100);
+	font-weight: bold;
+	font-size: 0.875rem;
+	line-height: 140%;
+
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 .button:hover {
-  background: var(--blue);
+	background: var(--blue);
 }
