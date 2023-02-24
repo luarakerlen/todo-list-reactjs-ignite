@@ -42,3 +42,17 @@ Empty List | With tasks
 
 ## Movie 🎥
 https://user-images.githubusercontent.com/26902816/221264300-43b0071a-fb96-4b04-847c-df345899a351.mov
+
+# Autora 👩🏽‍💻
+
+<a href="https://www.linkedin.com/in/luarakerlen/">
+ <img title="Luara Kerlen" style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/26902816?v=4" width="100px;" alt="Foto da Luara"/>
+ <br />
+ <sub><b>Luara Kerlen</b></sub></a> <a href="https://www.linkedin.com/in/luarakerlen/" title="Luara Kerlen"></a>
+ 
+Feito com ❤️ por Luara Kerlen
+<br>Entre em contato!
+
+[![Twitter Badge](https://img.shields.io/twitter/url?label=%40luarakerlen&style=social&url=https%3A%2F%2Ftwitter.com%2Fluarakerlen)](https://twitter.com/luarakerlen)
+[![Linkedin Badge](https://img.shields.io/badge/-Luara%20Kerlen-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luarakerlen/)](https://www.linkedin.com/in/luarakerlen/) 
+[![Gmail Badge](https://img.shields.io/badge/-luarakerlen12@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:luarakerlen12@gmail.com)](mailto:luarakerlen12@gmail.com)
