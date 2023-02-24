@@ -10,9 +10,10 @@ export interface TaskInterface {
 
 interface TaskProps {
 	task: TaskInterface;
+	deleteTask: (id: string) => void;
 }
 
-export function Task({ task }: TaskProps) {
+export function Task({ task, deleteTask }: TaskProps) {
 	function handleClickCheckbox() {
 		task.done = !task.done;
 	}
@@ -23,7 +24,10 @@ export function Task({ task }: TaskProps) {
 				<Checkbox task={task} onClickCheckbox={handleClickCheckbox} />
 				{task.description}
 			</div>
-			<button className={styles.buttonDelete}>
+			<button
+				className={styles.buttonDelete}
+				onClick={() => deleteTask(task.id)}
+			>
 				<Trash size={24} />
 			</button>
 		</div>

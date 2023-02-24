@@ -1,44 +1,73 @@
-.container {
+.form {
 	width: 46rem;
-	margin: 0px auto;
-	margin-top: 2.3rem;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+
+	position: relative;
+	top: -1.7rem;
 }
 
-header {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 1.5rem;
+.input {
+	flex: 1;
+	padding: 1rem;
+	border-radius: 8px;
+
+	color: var(--gray-100);
+	background: var(--gray-500);
+	border: 1px solid var(--gray-700);
+	line-height: 140%;
 }
 
-header div {
+.input::placeholder {
+	color: var(--gray-300);
+}
+
+.input:focus {
+	outline: transparent;
+	border: 1px solid var(--purple-dark);
+}
+
+.button {
+	padding: 1rem;
+	border-radius: 8px;
+	justify-content: center;
+
+	cursor: pointer;
+	border: none;
+	background: var(--blue-dark);
+	transition: background-color 0.2s;
+
+	color: var(--gray-100);
+	font-weight: bold;
+	font-size: 0.875rem;
+	line-height: 140%;
+
 	display: flex;
+	align-items: center;
 	gap: 0.5rem;
 }
 
-.createdTasks,
-.finishedTasks {
-	font-weight: bold;
-	font-size: 0.875rem;
+.button:not(:disabled):hover {
+	background: var(--blue);
 }
 
-.createdTasks {
-	color: var(--blue);
-}
-
-.finishedTasks {
-	color: var(--purple);
-}
-
-.numberOfTasks {
-	background-color: var(--gray-400);
-	padding: 0.125rem 0.5rem;
-	border-radius: 999px;
-	font-size: 0.75rem;
-	color: var(--gray-200);
+.button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
 }
 
 @media (max-width: 768px) {
-	.container {
+	.form {
+		flex-direction: column;
 		width: calc(100% - 4rem);
+	}
+
+	.input,
+	.button {
+		width: 100%;
 	}
 }

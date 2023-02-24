@@ -1,37 +1,57 @@
-import { EmptyArea } from './EmptyArea';
-import { Task, TaskInterface } from './Task';
+import { PlusCircle } from 'phosphor-react';
+import { ChangeEvent, FormEvent, useState } from 'react';
+import uuid from 'react-uuid';
+
+import { TaskInterface } from './Task';
+import { MainTasksArea } from './MainTasksArea';
 import styles from './TasksArea.module.css';
 
-interface TasksAreaProps {
-	tasks: TaskInterface[];
-}
+export function TasksArea() {
+	const [newTaskText, setNewTaskText] = useState('');
+	const [tasks, setTasks] = useState<TaskInterface[]>([]);
 
-export function TasksArea({ tasks }: TasksAreaProps) {
-	const hasSomeTask = tasks.length !== 0;
+	const isInputEmpty = newTaskText === '';
+
+	function handleCreateNewTask(event: FormEvent) {
+		event.preventDefault();
+		const newTask: TaskInterface = {
+			id: uuid(),
+			done: false,
+			description: newTaskText,
+		};
+
+		setTasks([...tasks, newTask]);
+		setNewTaskText('');
+	}
+
+	function handleChangeTaskText(event: ChangeEvent<HTMLInputElement>) {
+		setNewTaskText(event.target.value);
+	}
+
+	function handleDeleteTask(idToBeRemoved: string) {
+		const tasksWithoutDeletedOne = tasks.filter((task) => {
+			return task.id !== idToBeRemoved;
+		});
+
+		setTasks(tasksWithoutDeletedOne);
+	}
 
 	return (
-		<div className={styles.container}>
-			<header>
-				<div>
-					<span className={styles.createdTasks}>Tarefas criadas</span>
-					<span className={styles.numberOfTasks}>{tasks.length}</span>
-				</div>
-				<div>
-					<span className={styles.finishedTasks}>Concluídas</span>
-					<span className={styles.numberOfTasks}>0 de {tasks.length}</span>
-				</div>
-			</header>
-			<div>
-				{hasSomeTask ? (
-					<div>
-						{tasks.map((task) => {
-							return <Task key={task.id} task={task} />;
-						})}
-					</div>
-				) : (
-					<EmptyArea />
-				)}
-			</div>
-		</div>
+		<>
+			<form className={styles.form} onSubmit={handleCreateNewTask}>
+				<input
+					className={styles.input}
+					type='text'
+					placeholder='Adicione uma nova tarefa'
+					value={newTaskText}
+					onChange={handleChangeTaskText}
+				/>
+				<button className={styles.button} type='submit' disabled={isInputEmpty}>
+					Criar
+					<PlusCircle size={16} weight='bold' />
+				</button>
+			</form>
+			<MainTasksArea tasks={tasks} handleDeleteTask={handleDeleteTask} />
+		</>
 	);
 }
