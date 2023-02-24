@@ -1,8 +1,9 @@
 import { EmptyArea } from './EmptyArea';
+import { Task } from './Task';
 import styles from './TasksArea.module.css';
 
 export function TasksArea() {
-	const hasSomeTask = false;
+	const hasSomeTask = true;
 
 	return (
 		<div className={styles.container}>
@@ -16,7 +17,17 @@ export function TasksArea() {
 					<span className={styles.numberOfTasks}>0</span>
 				</div>
 			</header>
-			<div>{hasSomeTask ? <div></div> : <EmptyArea />}</div>
+			<div>
+				{hasSomeTask ? (
+					<div>
+						<Task />
+						<Task />
+						<Task />
+					</div>
+				) : (
+					<EmptyArea />
+				)}
+			</div>
 		</div>
 	);
 }

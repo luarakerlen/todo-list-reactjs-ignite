@@ -19,9 +19,9 @@
 }
 
 :focus {
-	outline: transparent;
-	border: 1px solid var(--purple-dark);
-	box-shadow:  0 0 0 1px var(--purple-dark);
+	/* outline: var(--purple-dark); */
+	/* border: 1px solid var(--purple-dark); */
+	/*box-shadow:  0 0 0 1px var(--purple-dark); */
 }
 
 * {
