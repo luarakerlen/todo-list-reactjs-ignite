@@ -8,10 +8,9 @@ import styles from './NewTaskArea.module.css';
 
 export function NewTaskArea() {
 	const [newTaskText, setNewTaskText] = useState('');
-	const [tasks, setTasks] = useState<TaskInterface[]>([
-		{ id: '1', done: false, description: 'Tarefa 1' },
-		{ id: '2', done: false, description: 'Tarefa 2' },
-	]);
+	const [tasks, setTasks] = useState<TaskInterface[]>([]);
+
+	const isInputEmpty = newTaskText === '';
 
 	function handleCreateNewTask(event: FormEvent) {
 		event.preventDefault();
@@ -39,7 +38,7 @@ export function NewTaskArea() {
 					value={newTaskText}
 					onChange={handleChangeTaskText}
 				/>
-				<button className={styles.button} type='submit'>
+				<button className={styles.button} type='submit' disabled={isInputEmpty}>
 					Criar
 					<PlusCircle size={16} weight='bold' />
 				</button>
